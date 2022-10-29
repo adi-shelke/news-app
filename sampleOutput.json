@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "totalResults": 4,
+  "articles": [
+    {
+      "source": { "id": "news24", "name": "News24" },
+      "author": "AFP",
+      "title": "Ex-Australia skipper Paine accuses Proteas of ball-tampering after 'Sandpaper-gate'",
+      "description": "Tim Paine has accused South Africa of ball-tampering just days after Australian cricket was rocked by the sandpaper-gate scandal in 2018, alleging it was covered up by the match broadcaster.",
+      "url": "https://www.news24.com/sport/cricket/t20worldcup/ex-australia-skipper-paine-accuses-proteas-of-ball-tampering-after-sandpaper-gate-20221025",
+      "urlToImage": "https://cdn.24.co.za/files/Cms/General/d/321/bd764ec4ffae4109a11aaeb4b0936542.jpg",
+      "publishedAt": "2022-10-25T06:47:29+00:00",
+      "content": "Tim Paine has accused South Africa of ball-tampering just days after Australian cricket was rocked by the sandpaper-gate scandal in 2018, alleging it was covered up by the match broadcaster.\r\nThe for… [+3393 chars]"
+    },
+    {
+      "source": { "id": "bbc-sport", "name": "BBC Sport" },
+      "author": null,
+      "title": "The birth of the world's first great black batter",
+      "description": "George Headley was the first iconic black batter but his path to cricket greatness was very different from his contemporary Don Bradman.",
+      "url": "http://www.bbc.co.uk/sport/cricket/63231999",
+      "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/475A/production/_127066281_gettyimages-80101882.jpg",
+      "publishedAt": "2022-10-24T13:22:25.7055931Z",
+      "content": "George Headley scored 10 hundreds in 22 Tests for the West Indies between 1930 and 1954\r\nThe wooden house in the town where Australian legend Don Bradman was born has been turned into a museum.\r\nYet … [+10860 chars]"
+    },
+    {
+      "source": { "id": "espn-cric-info", "name": "ESPN Cric Info" },
+      "author": null,
+      "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
+      "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
+      "url": "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
+      "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg",
+      "publishedAt": "2020-04-27T11:41:47Z",
+      "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
+    },
+    {
+      "source": { "id": "espn-cric-info", "name": "ESPN Cric Info" },
+      "author": null,
+      "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
+      "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
+      "url": "http://www.espncricinfo.com/story/_/id/28970907/learned-watching-1992-world-cup-final-full-again",
+      "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
+      "publishedAt": "2020-03-30T15:26:05Z",
+      "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
+    }
+  ]
+}
