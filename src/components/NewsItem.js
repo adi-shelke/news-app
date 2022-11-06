@@ -13,7 +13,7 @@ export class NewsItem extends Component {
               {description}...
             </p>
             <p className="p-0 mb-2">{publishTime}</p>
-            <a href={newsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">
+            <a href={newsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-dark">
               Read Article
             </a>
           </div>
