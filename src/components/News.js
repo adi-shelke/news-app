@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
-
-
-
+const spinner = require("../spinner.gif")
 
 export default class News extends Component {
   constructor() {
@@ -13,48 +11,69 @@ export default class News extends Component {
       page:1
     };
   }
- 
-  async componentDidMount(){
-    let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=09d7a6962b2f486d99781b8d1263661c&page=${this.state.page}&pageSize=20`
+ async updatepage(page)
+ {
+  let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=09d7a6962b2f486d99781b8d1263661c&page=${page}&pageSize=20`
     console.log(url)
+    this.setState({loading:true})
     let data = await fetch(url)
     data = await data.json()
     this.setState({
       articles:data.articles,
-      totalResults:data.totalResults
+      totalResults:data.totalResults,
+      loading:false
     }
   )
+ }
+  async componentDidMount(){
+  //   let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=09d7a6962b2f486d99781b8d1263661c&page=${this.state.page}&pageSize=20`
+  //   console.log(url)
+  //   this.setState({loading:true})
+  //   let data = await fetch(url)
+  //   data = await data.json()
+  //   this.setState({
+  //     articles:data.articles,
+  //     totalResults:data.totalResults,
+  //     loading:false
+  //   }
+  // )
+  this.updatepage()
   }
   nextPage=async()=> {
-    if(!(this.state.page+1>Math.ceil(this.state.totalResults/20)))
-    {
-      let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=09d7a6962b2f486d99781b8d1263661c&page=${this.state.page+1}&pageSize=20`
-      let data = await fetch(url)
-      data = await data.json()
-      this.setState({articles:data.articles})
-      this.setState({
-          page:(this.state.page)+1,
-          articles:data.articles
-        }
-      )
-    }
+    // if(!(this.state.page+1>Math.ceil(this.state.totalResults/20)))
+    // {
+    //   let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=09d7a6962b2f486d99781b8d1263661c&page=${this.state.page+1}&pageSize=20`
+    //   let data = await fetch(url)
+    //   data = await data.json()
+    //   this.setState({articles:data.articles})
+    //   this.setState({
+    //       page:(this.state.page)+1,
+    //       articles:data.articles
+    //     }
+    //   )
+    // }
+    this.updatepage(this.state.page+1)
+    this.setState({page:this.state.page+1})
   }
   prevPage=async()=> {
-    let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=09d7a6962b2f486d99781b8d1263661c&page=${this.state.page-1}&pageSize=20`
-    let data = await fetch(url)
-    data = await data.json()
-    this.setState({articles:data.articles})
-    this.setState({
-      page:(this.state.page)-1,
-      articles:data.articles
-    }
-  )
+    // let url=`https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=09d7a6962b2f486d99781b8d1263661c&page=${this.state.page-1}&pageSize=20`
+    // let data = await fetch(url)
+    // data = await data.json()
+    // this.setState({articles:data.articles})
+    // this.setState({
+    //   page:(this.state.page)-1,
+    //   articles:data.articles
+    // }
+    // )
+    this.updatepage(this.state.page-1)
+    this.setState({page:this.state.page-1})
   }
-
-
+  
+  
   render() {
     return (
       <>
+        {this.state.loading?<img alt="spinner" className="rounded mx-auto d-block mt-3" src={spinner}></img>:
         <div className="container my-3">
           <h2 className="text-center">Top headlines of today</h2>
           <div className="row">
@@ -74,9 +93,10 @@ export default class News extends Component {
           </div>
           <div className="container d-flex justify-content-between">
           <button className="btn btn-success" onClick={this.prevPage} disabled={this.state.page<=1}>&larr; Previous</button>
-          <button className="btn btn-success mx-2"onClick={this.nextPage}>Next &rarr;</button>
+          <button id="nxtBtn" className="btn btn-success mx-2"onClick={this.nextPage} disabled={(this.state.page+1>Math.ceil(this.state.totalResults/20))}>Next &rarr;</button>
           </div>
         </div>
+        }
       </>
     );
   }
