@@ -50,9 +50,9 @@ const prevPage=async()=> {
   }
     return (
       <>
-        {loading?<img alt="spinner" className="rounded mx-auto d-block mt-3" src={spinner}></img>:
+        {loading?<img alt="spinner" className="rounded mx-auto d-block mt-6" style={{marginTop:"80px"}} src={spinner}></img>:
         <div className="container my-3">
-          <h2 className="text-center"> Top {props.category.charAt(0).toUpperCase()+props.category.slice(1)} Headlines</h2>
+          <h2 className="text-center" style={{marginTop:"80px"}}> Top {props.category.charAt(0).toUpperCase()+props.category.slice(1)} Headlines</h2>
           <div className="row">
             {articles.map((element) => {
               return (
